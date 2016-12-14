@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ormRoot:ORM2 xmlns:orm="http://schemas.neumont.edu/ORM/2006-04/ORMCore" xmlns:ormDiagram="http://schemas.neumont.edu/ORM/2006-04/ORMDiagram" xmlns:ormRoot="http://schemas.neumont.edu/ORM/2006-04/ORMRoot">
+	<orm:ORMModel id="_25B701DA-8479-450B-9B5E-2AC6CE902415" Name="ORMModel1">
+		<orm:ReferenceModeKinds>
+			<orm:ReferenceModeKind id="_60C89B5A-80CE-46C5-BBF9-B077ACBDCBB8" FormatString="{1}" ReferenceModeType="General" />
+			<orm:ReferenceModeKind id="_B88515AD-D16D-49EB-9324-2206B0C9E10E" FormatString="{0}_{1}" ReferenceModeType="Popular" />
+			<orm:ReferenceModeKind id="_A0EC9234-02AD-4E2D-9A2C-E28D4A1E78E0" FormatString="{1}Value" ReferenceModeType="UnitBased" />
+		</orm:ReferenceModeKinds>
+	</orm:ORMModel>
+	<ormDiagram:ORMDiagram id="_709EEA6B-E753-4843-B349-238D90686FC2" IsCompleteView="false" Name="ORMModel1" BaseFontName="Tahoma" BaseFontSize="0.0972222238779068">
+		<ormDiagram:Subject ref="_25B701DA-8479-450B-9B5E-2AC6CE902415" />
+	</ormDiagram:ORMDiagram>
+</ormRoot:ORM2>
