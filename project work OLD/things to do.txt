@@ -1,0 +1,17 @@
+%todo%	- the reference modes for Date and Milking Date should be general ones, not unit-based (i.e. remove the colons there) 
+
+%done%	- the derivation "UnhealthyCow is a cow which is sick or her lactation period is over after the third calf" seems a bit off as it doesn't mention that a cow is still regarded as unhealthy for two weeks after receiving her last dose of medicine
+
+%done%	- the derivation "HealthyCow is a Cow that is not sick or has given birth less than 250 days before" is incorrect because a cow that has given birth less than 250 days before but is sick is still unhealthy
+
+%done%	- 'has certificate" is a bit too shallow of a predicate... a better one would be "has milking parlor certificate"
+
+%done%	- are you sure you want to allow employees to hold only one job? This is defensible, but make sure to motivate your design decisions in your report
+	
+%done%	- "Employee has Skills" still requires a uniqueness constraint
+	
+%done%	- the values of Parlor should be restricted just like Gender's
+
+%todo%	- it's a great idea to have "Milking" be a nested entity, but this is not the right fact type to objectify. In your current model, milkings are identified by 'cow 	which was milked' and 'employee who milked that cow'... however, it should be possible to register multiple milkings involving the same cow-employee combination, and hence it's not possible to identify a milking by this combination. The combination that is unique for every single milking is that of 'cow which was milked' and	'moment at which that cow was milked', as no cow will ever be milked twice at the same time. Therefore, this is the fact type that you should turn into a nested entity 	type (with the 'employee performed milking' becoming a relation between the milking entity and the employee one)
+
+%todo%	- there is some information missing from your model... to be more exact, your subtypes 'Cow' and 'Bull' should play a few more specific roles of their own: for a cow this comes down to registering dates when the cow was sick or received medicine, dates when the cow calved, and whether she is currently marked for insemination (this 	will also result in your '(Un)HealthyCow' derivations actually referring to information that is part of the database) & for a bull this comes down registering who currently inhabit the bull shed (with a constraint that limits the population of this unary fact type to 3, as the project work assignment's text states that the bull shed offers space for just three bulls)
