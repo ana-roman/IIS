@@ -2642,7 +2642,7 @@
 			<ormDiagram:ModelNoteShape id="_C62C0A4D-EB36-42DD-A543-383DA705176A" IsExpanded="true" AbsoluteBounds="0.5, 4.6615666329455365, 3.6973139400482178, 0.14150302660465242">
 				<ormDiagram:Subject ref="_E13E3A8E-B013-4D15-A520-C9986E8120C4" />
 			</ormDiagram:ModelNoteShape>
-			<ormDiagram:ModelNoteShape id="_4F8AB73C-96E1-4ACE-8F92-A9994AF734B4" IsExpanded="true" AbsoluteBounds="5.1829314736323493, 4.6295291392274951, 8.66335383605957, 0.14150304150581361">
+			<ormDiagram:ModelNoteShape id="_4F8AB73C-96E1-4ACE-8F92-A9994AF734B4" IsExpanded="true" AbsoluteBounds="5.2010474160369151, 4.1856885503156249, 8.66335383605957, 0.14150304150581361">
 				<ormDiagram:Subject ref="_0B760407-F78D-47CF-B5C1-C647B03A6DF7" />
 			</ormDiagram:ModelNoteShape>
 			<ormDiagram:FactTypeShape id="_AD79A5F4-F3F4-4B54-B897-B8B636F50D2C" IsExpanded="true" AbsoluteBounds="4.09207301860878, 5.5658999728180953, 0.51388888899236917, 0.30588888899236916">
@@ -2876,205 +2876,167 @@
 		<rcd:Schemas>
 			<rcd:Schema id="_B6762266-0A50-443B-857B-9B5512C47DBE" Name="ORMModel1">
 				<rcd:Tables>
-					<rcd:Table id="_AB02E4E4-12A9-4881-8EB6-3B1A5A602F59" Name="Employee">
+					<rcd:Table id="_A4DD8122-DB16-4025-A6C1-387834FBA9F3" Name="Employee">
 						<rcd:Columns>
-							<rcd:Column id="_540BCBA8-0804-41A9-B013-19217F100D75" Name="employeeName" />
-							<rcd:Column id="_CC316C2A-CC60-4430-BC5D-47EAA9686EA9" Name="jobName" />
-							<rcd:Column id="_C94DB9A5-3B77-453D-8485-55FF37BC374D" Name="salary" />
-							<rcd:Column id="_BDFCABF7-01DE-4597-9F86-454AC15E078D" Name="hasMilkingParlorCertificate" IsNullable="true" />
+							<rcd:Column id="_8B6788D4-AABC-459D-A50B-107B42DDF0F4" Name="employeeName" />
+							<rcd:Column id="_5436A9CD-D4E3-4CEA-8269-37A1FD619045" Name="jobName" />
+							<rcd:Column id="_6E2A6A47-0B17-484C-B01B-66EBE14B5E48" Name="salary" />
+							<rcd:Column id="_00028028-041B-43E7-BFB8-5E77056E88CF" Name="hasMilkingParlorCertificate" IsNullable="true" />
 						</rcd:Columns>
 						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_85A38288-30C1-43E9-B3BD-489B32F8D024" Name="Employee_PK" IsPrimary="true">
+							<rcd:UniquenessConstraint id="_D1C89F7B-8570-4F7E-B91F-864EB52EA45B" Name="Employee_PK" IsPrimary="true">
 								<rcd:Columns>
-									<rcd:Column ref="_540BCBA8-0804-41A9-B013-19217F100D75" />
+									<rcd:Column ref="_8B6788D4-AABC-459D-A50B-107B42DDF0F4" />
 								</rcd:Columns>
 							</rcd:UniquenessConstraint>
 						</rcd:Constraints>
 					</rcd:Table>
-					<rcd:Table id="_556BCE15-2592-4F53-812F-445DF353643C" Name="Cow">
+					<rcd:Table id="_293124A6-28C9-4700-9D91-F327666D3BBC" Name="Cattle">
 						<rcd:Columns>
-							<rcd:Column id="_7B0C0734-4007-4D76-A28B-3E5DDE40B271" Name="cowEartag" />
+							<rcd:Column id="_8D0A6AD1-D77B-439D-B59A-64D68AA1DF9E" Name="cattleEartag" />
+							<rcd:Column id="_4391FA42-4681-4CFB-AF35-9640686E3916" Name="genderCode" />
+							<rcd:Column id="_A56841C9-9208-4EB4-BB83-52058707368F" Name="prefix" />
+							<rcd:Column id="_A34ED2C1-3491-4524-9FC5-201433CE462E" Name="suffix" />
+							<rcd:Column id="_5AF2ED1F-B7AD-443F-8776-6CCAF8823F2A" Name="wasBornOnDateMdy" />
+							<rcd:Column id="_0F7E0D28-FC78-47A5-9336-E8E7B1CCC1F4" Name="bullEartag" IsNullable="true" />
+							<rcd:Column id="_AF87E0D7-3617-4C1E-B32E-A5682C6932E9" Name="bullResidesInBullshed" IsNullable="true" />
+							<rcd:Column id="_C0C4D10F-685E-43E9-B181-16FB4D886415" Name="comments" IsNullable="true" />
+							<rcd:Column id="_24EB407D-B021-4327-AB2B-AE2B1A111E27" Name="cowEartag" IsNullable="true" />
+							<rcd:Column id="_D452EA0B-18BA-46F1-80A7-8ACCD2DFFE87" Name="wasSoldOnDateMdy" IsNullable="true" />
 						</rcd:Columns>
 						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_164B35C3-6812-402F-A343-AEDB029C26E2" Name="Cow_PK" IsPrimary="true">
+							<rcd:UniquenessConstraint id="_3CACA010-8FF3-426D-AB10-89AB66EBFD71" Name="Cattle_UC">
 								<rcd:Columns>
-									<rcd:Column ref="_7B0C0734-4007-4D76-A28B-3E5DDE40B271" />
+									<rcd:Column ref="_A56841C9-9208-4EB4-BB83-52058707368F" />
+									<rcd:Column ref="_A34ED2C1-3491-4524-9FC5-201433CE462E" />
 								</rcd:Columns>
 							</rcd:UniquenessConstraint>
-							<rcd:ReferenceConstraint id="_0433C55D-606B-498E-B6BC-72884D071D88" Name="Cow_FK">
-								<rcd:TargetTable ref="_4E7E6AC1-FF49-4DAC-8670-BFE1036673E4" />
-								<rcd:TargetUniquenessConstraint ref="_E9ECB294-4F23-4774-90CB-00611ADE85C6" />
+							<rcd:UniquenessConstraint id="_5D0AC00B-951F-4B82-A9EC-5AAD2BA6A676" Name="Cattle_PK" IsPrimary="true">
+								<rcd:Columns>
+									<rcd:Column ref="_8D0A6AD1-D77B-439D-B59A-64D68AA1DF9E" />
+								</rcd:Columns>
+							</rcd:UniquenessConstraint>
+							<rcd:ReferenceConstraint id="_4DB7FF84-ADCE-4F80-9ED5-48EFC1A97E32" Name="Cattle_FK1">
+								<rcd:TargetTable ref="_293124A6-28C9-4700-9D91-F327666D3BBC" />
+								<rcd:TargetUniquenessConstraint ref="_5D0AC00B-951F-4B82-A9EC-5AAD2BA6A676" />
 								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_C7CED7A9-F64F-4ABD-89A7-BBE1A542AA14" SourceColumn="_7B0C0734-4007-4D76-A28B-3E5DDE40B271" />
+									<rcd:ColumnReference TargetColumn="_8D0A6AD1-D77B-439D-B59A-64D68AA1DF9E" SourceColumn="_0F7E0D28-FC78-47A5-9336-E8E7B1CCC1F4" />
+								</rcd:ColumnReferences>
+							</rcd:ReferenceConstraint>
+							<rcd:ReferenceConstraint id="_6578997F-DD8E-45AD-A738-C3D94C93BC0D" Name="Cattle_FK2">
+								<rcd:TargetTable ref="_293124A6-28C9-4700-9D91-F327666D3BBC" />
+								<rcd:TargetUniquenessConstraint ref="_5D0AC00B-951F-4B82-A9EC-5AAD2BA6A676" />
+								<rcd:ColumnReferences>
+									<rcd:ColumnReference TargetColumn="_8D0A6AD1-D77B-439D-B59A-64D68AA1DF9E" SourceColumn="_24EB407D-B021-4327-AB2B-AE2B1A111E27" />
 								</rcd:ColumnReferences>
 							</rcd:ReferenceConstraint>
 						</rcd:Constraints>
 					</rcd:Table>
-					<rcd:Table id="_4E7E6AC1-FF49-4DAC-8670-BFE1036673E4" Name="Cattle">
+					<rcd:Table id="_07FAAA00-A68A-4F06-92CB-5FA486034B9A" Name="HealthyCow">
 						<rcd:Columns>
-							<rcd:Column id="_C7CED7A9-F64F-4ABD-89A7-BBE1A542AA14" Name="cattleEartag" />
-							<rcd:Column id="_13CCF332-4739-4B8C-B1E1-943F54FAC384" Name="genderCode" />
-							<rcd:Column id="_83F5513B-0880-4464-BC27-12370AECA2C5" Name="prefix" />
-							<rcd:Column id="_E6916BA7-5064-4A86-B440-7E62A212C64D" Name="suffix" />
-							<rcd:Column id="_C9F339E1-FD5E-4A53-9724-C80C4046EDDF" Name="wasBornOnDateMdy" />
-							<rcd:Column id="_D26F9668-0C9D-4242-AA4D-451C3DC0B783" Name="bullEartag" IsNullable="true" />
-							<rcd:Column id="_6834040D-D2BB-406A-88A9-F6480AD5A132" Name="comments" IsNullable="true" />
-							<rcd:Column id="_027A6C2E-EB06-44A3-A742-CC7EDEE8AC37" Name="cowEartag" IsNullable="true" />
-							<rcd:Column id="_CB04D209-5200-4F1E-B624-DB9D570B911D" Name="wasSoldOnDateMdy" IsNullable="true" />
+							<rcd:Column id="_1ED54C85-7858-451C-A73F-285B5A04582C" Name="healthyCowEartag" />
 						</rcd:Columns>
 						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_E06C6296-E918-435E-A655-BAD9395B1134" Name="Cattle_UC">
+							<rcd:UniquenessConstraint id="_46F147BD-2E24-4F55-8A33-61EC9127FA59" Name="HealthyCow_PK" IsPrimary="true">
 								<rcd:Columns>
-									<rcd:Column ref="_83F5513B-0880-4464-BC27-12370AECA2C5" />
-									<rcd:Column ref="_E6916BA7-5064-4A86-B440-7E62A212C64D" />
+									<rcd:Column ref="_1ED54C85-7858-451C-A73F-285B5A04582C" />
 								</rcd:Columns>
 							</rcd:UniquenessConstraint>
-							<rcd:UniquenessConstraint id="_E9ECB294-4F23-4774-90CB-00611ADE85C6" Name="Cattle_PK" IsPrimary="true">
-								<rcd:Columns>
-									<rcd:Column ref="_C7CED7A9-F64F-4ABD-89A7-BBE1A542AA14" />
-								</rcd:Columns>
-							</rcd:UniquenessConstraint>
-							<rcd:ReferenceConstraint id="_42B51091-9F6B-4C6F-A0A2-B4011B6251B0" Name="Cattle_FK1">
-								<rcd:TargetTable ref="_DCC08210-9138-4F6C-90ED-FA1191915ACB" />
-								<rcd:TargetUniquenessConstraint ref="_D066CAC9-5A80-4FDB-8DCC-C60CE6FC1CCB" />
+							<rcd:ReferenceConstraint id="_60DDE67D-3E9B-4397-930A-AF217455B2CF" Name="HealthyCow_FK">
+								<rcd:TargetTable ref="_293124A6-28C9-4700-9D91-F327666D3BBC" />
+								<rcd:TargetUniquenessConstraint ref="_5D0AC00B-951F-4B82-A9EC-5AAD2BA6A676" />
 								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_585DC6C6-4FE9-49F2-8B14-58C29C3A8F27" SourceColumn="_D26F9668-0C9D-4242-AA4D-451C3DC0B783" />
-								</rcd:ColumnReferences>
-							</rcd:ReferenceConstraint>
-							<rcd:ReferenceConstraint id="_481EEA9A-E4CF-4EA4-9812-D2BA10FD336C" Name="Cattle_FK2">
-								<rcd:TargetTable ref="_556BCE15-2592-4F53-812F-445DF353643C" />
-								<rcd:TargetUniquenessConstraint ref="_164B35C3-6812-402F-A343-AEDB029C26E2" />
-								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_7B0C0734-4007-4D76-A28B-3E5DDE40B271" SourceColumn="_027A6C2E-EB06-44A3-A742-CC7EDEE8AC37" />
+									<rcd:ColumnReference TargetColumn="_8D0A6AD1-D77B-439D-B59A-64D68AA1DF9E" SourceColumn="_1ED54C85-7858-451C-A73F-285B5A04582C" />
 								</rcd:ColumnReferences>
 							</rcd:ReferenceConstraint>
 						</rcd:Constraints>
 					</rcd:Table>
-					<rcd:Table id="_DCC08210-9138-4F6C-90ED-FA1191915ACB" Name="Bull">
+					<rcd:Table id="_E4AEB512-5CB7-42D3-A42E-214DCCD1654F" Name="UnhealthyCow">
 						<rcd:Columns>
-							<rcd:Column id="_585DC6C6-4FE9-49F2-8B14-58C29C3A8F27" Name="bullEartag" />
-							<rcd:Column id="_05252DE4-B4AE-43D6-9C46-9AD35561DE26" Name="residesInBullshed" IsNullable="true" />
+							<rcd:Column id="_1294FE6B-52C9-4BD9-B328-4B41EE413991" Name="unhealthyCowEartag" />
 						</rcd:Columns>
 						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_D066CAC9-5A80-4FDB-8DCC-C60CE6FC1CCB" Name="Bull_PK" IsPrimary="true">
+							<rcd:UniquenessConstraint id="_11709531-7CEA-48DA-8857-9C72DFD43C65" Name="UnhealthyCow_PK" IsPrimary="true">
 								<rcd:Columns>
-									<rcd:Column ref="_585DC6C6-4FE9-49F2-8B14-58C29C3A8F27" />
+									<rcd:Column ref="_1294FE6B-52C9-4BD9-B328-4B41EE413991" />
 								</rcd:Columns>
 							</rcd:UniquenessConstraint>
-							<rcd:ReferenceConstraint id="_EA93C49F-884B-4E1F-8D4F-E7B86E53945E" Name="Bull_FK">
-								<rcd:TargetTable ref="_4E7E6AC1-FF49-4DAC-8670-BFE1036673E4" />
-								<rcd:TargetUniquenessConstraint ref="_E9ECB294-4F23-4774-90CB-00611ADE85C6" />
+							<rcd:ReferenceConstraint id="_C88DEA3B-D62C-4C2A-8B33-5386198E0B7D" Name="UnhealthyCow_FK">
+								<rcd:TargetTable ref="_293124A6-28C9-4700-9D91-F327666D3BBC" />
+								<rcd:TargetUniquenessConstraint ref="_5D0AC00B-951F-4B82-A9EC-5AAD2BA6A676" />
 								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_C7CED7A9-F64F-4ABD-89A7-BBE1A542AA14" SourceColumn="_585DC6C6-4FE9-49F2-8B14-58C29C3A8F27" />
+									<rcd:ColumnReference TargetColumn="_8D0A6AD1-D77B-439D-B59A-64D68AA1DF9E" SourceColumn="_1294FE6B-52C9-4BD9-B328-4B41EE413991" />
 								</rcd:ColumnReferences>
 							</rcd:ReferenceConstraint>
 						</rcd:Constraints>
 					</rcd:Table>
-					<rcd:Table id="_CDC35AD7-1A3B-42C0-8B97-5A3794169F08" Name="HealthyCow">
+					<rcd:Table id="_A50A1C05-34D5-40E3-9EE8-C1986C3F95FD" Name="EmployeeHasSkills">
 						<rcd:Columns>
-							<rcd:Column id="_3B6036FA-0E5D-4142-875A-5C285A52546E" Name="healthyCowEartag" />
+							<rcd:Column id="_8D8981D3-351E-4060-9719-72763759283A" Name="employeeName" />
+							<rcd:Column id="_9B1AD057-7A6F-4611-B87D-A2BF713D46B8" Name="skills" />
 						</rcd:Columns>
 						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_2BA66EE6-F231-47ED-84EE-BE5AFA53E125" Name="HealthyCow_PK" IsPrimary="true">
+							<rcd:UniquenessConstraint id="_8F46A251-9721-4B8D-9D4D-063E031E8CC7" Name="EmployeeHasSkills_PK" IsPrimary="true">
 								<rcd:Columns>
-									<rcd:Column ref="_3B6036FA-0E5D-4142-875A-5C285A52546E" />
+									<rcd:Column ref="_9B1AD057-7A6F-4611-B87D-A2BF713D46B8" />
+									<rcd:Column ref="_8D8981D3-351E-4060-9719-72763759283A" />
 								</rcd:Columns>
 							</rcd:UniquenessConstraint>
-							<rcd:ReferenceConstraint id="_78285085-44AA-4F71-B1C2-BE52619EC1D6" Name="HealthyCow_FK">
-								<rcd:TargetTable ref="_556BCE15-2592-4F53-812F-445DF353643C" />
-								<rcd:TargetUniquenessConstraint ref="_164B35C3-6812-402F-A343-AEDB029C26E2" />
+							<rcd:ReferenceConstraint id="_C2E53443-8F5D-4BCF-8CD6-152E9FABE2EA" Name="EmployeeHasSkills_FK">
+								<rcd:TargetTable ref="_A4DD8122-DB16-4025-A6C1-387834FBA9F3" />
+								<rcd:TargetUniquenessConstraint ref="_D1C89F7B-8570-4F7E-B91F-864EB52EA45B" />
 								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_7B0C0734-4007-4D76-A28B-3E5DDE40B271" SourceColumn="_3B6036FA-0E5D-4142-875A-5C285A52546E" />
+									<rcd:ColumnReference TargetColumn="_8B6788D4-AABC-459D-A50B-107B42DDF0F4" SourceColumn="_8D8981D3-351E-4060-9719-72763759283A" />
 								</rcd:ColumnReferences>
 							</rcd:ReferenceConstraint>
 						</rcd:Constraints>
 					</rcd:Table>
-					<rcd:Table id="_57588648-6031-40F4-96B1-D1BE95CEEC13" Name="UnhealthyCow">
+					<rcd:Table id="_94D2D62D-21A4-4D47-94E8-65847C93EB09" Name="TheMilking">
 						<rcd:Columns>
-							<rcd:Column id="_278B2133-9E57-45A3-AB4C-B451D5BFAE89" Name="unhealthyCowEartag" />
+							<rcd:Column id="_6D808A08-4A62-49A4-B64B-A5DD8B068B5F" Name="healthyCowEartag" />
+							<rcd:Column id="_F9D42FA2-C681-4B08-A6C7-DB4CF027E4F3" Name="lipidity" />
+							<rcd:Column id="_F84DE7A3-9222-4EF9-87D4-AAC2E860C9A4" Name="milkingDate" />
+							<rcd:Column id="_3A1BBE04-5645-460F-A927-883C2E06BA67" Name="parlorNr" />
+							<rcd:Column id="_1AAB5870-AD61-4864-904C-DE1E48112DC1" Name="volume" />
+							<rcd:Column id="_CCE5BF56-B16D-4C83-AF28-5935217BD70A" Name="certifiedEmployeeName" IsNullable="true" />
 						</rcd:Columns>
 						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_1FA9016B-FDE6-4395-BCFA-2F18AC546354" Name="UnhealthyCow_PK" IsPrimary="true">
+							<rcd:UniquenessConstraint id="_2175AFFF-82F5-433C-93DD-07211A3BE464" Name="TheMilking_PK" IsPrimary="true">
 								<rcd:Columns>
-									<rcd:Column ref="_278B2133-9E57-45A3-AB4C-B451D5BFAE89" />
+									<rcd:Column ref="_6D808A08-4A62-49A4-B64B-A5DD8B068B5F" />
 								</rcd:Columns>
 							</rcd:UniquenessConstraint>
-							<rcd:ReferenceConstraint id="_8F01BA75-BF4F-4010-932D-0FEAC2F8AD96" Name="UnhealthyCow_FK">
-								<rcd:TargetTable ref="_556BCE15-2592-4F53-812F-445DF353643C" />
-								<rcd:TargetUniquenessConstraint ref="_164B35C3-6812-402F-A343-AEDB029C26E2" />
+							<rcd:ReferenceConstraint id="_ED2C5DEB-9DD8-4590-98A4-016DDCC27DD7" Name="TheMilking_FK1">
+								<rcd:TargetTable ref="_7ECA33F4-52D3-4FC2-994E-A1BB001B0010" />
+								<rcd:TargetUniquenessConstraint ref="_FE516E3C-E716-44E8-AADA-94EFEFABD9CA" />
 								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_7B0C0734-4007-4D76-A28B-3E5DDE40B271" SourceColumn="_278B2133-9E57-45A3-AB4C-B451D5BFAE89" />
+									<rcd:ColumnReference TargetColumn="_5D3B67D5-692F-439F-93CD-4723565B3DCD" SourceColumn="_CCE5BF56-B16D-4C83-AF28-5935217BD70A" />
+								</rcd:ColumnReferences>
+							</rcd:ReferenceConstraint>
+							<rcd:ReferenceConstraint id="_141E8570-718C-4A16-A594-BBF4CE1AB5B3" Name="TheMilking_FK2">
+								<rcd:TargetTable ref="_07FAAA00-A68A-4F06-92CB-5FA486034B9A" />
+								<rcd:TargetUniquenessConstraint ref="_46F147BD-2E24-4F55-8A33-61EC9127FA59" />
+								<rcd:ColumnReferences>
+									<rcd:ColumnReference TargetColumn="_1ED54C85-7858-451C-A73F-285B5A04582C" SourceColumn="_6D808A08-4A62-49A4-B64B-A5DD8B068B5F" />
 								</rcd:ColumnReferences>
 							</rcd:ReferenceConstraint>
 						</rcd:Constraints>
 					</rcd:Table>
-					<rcd:Table id="_E9E49E0E-7D78-4DEE-926D-B2D87CE9A06D" Name="EmployeeHasSkills">
+					<rcd:Table id="_7ECA33F4-52D3-4FC2-994E-A1BB001B0010" Name="CertifiedEmployee">
 						<rcd:Columns>
-							<rcd:Column id="_C610B337-98F7-4BBB-B82C-F9A0B1C4659D" Name="employeeName" />
-							<rcd:Column id="_B616244D-676E-423E-9410-73B5505999BC" Name="skills" />
+							<rcd:Column id="_5D3B67D5-692F-439F-93CD-4723565B3DCD" Name="certifiedEmployeeName" />
 						</rcd:Columns>
 						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_A5B5B1B8-27A1-456B-B4D8-3AB2CC79BCF4" Name="EmployeeHasSkills_PK" IsPrimary="true">
+							<rcd:UniquenessConstraint id="_FE516E3C-E716-44E8-AADA-94EFEFABD9CA" Name="CertifiedEmployee_PK" IsPrimary="true">
 								<rcd:Columns>
-									<rcd:Column ref="_B616244D-676E-423E-9410-73B5505999BC" />
-									<rcd:Column ref="_C610B337-98F7-4BBB-B82C-F9A0B1C4659D" />
+									<rcd:Column ref="_5D3B67D5-692F-439F-93CD-4723565B3DCD" />
 								</rcd:Columns>
 							</rcd:UniquenessConstraint>
-							<rcd:ReferenceConstraint id="_C433F30A-7134-46EF-9B8A-DB518060CC2A" Name="EmployeeHasSkills_FK">
-								<rcd:TargetTable ref="_AB02E4E4-12A9-4881-8EB6-3B1A5A602F59" />
-								<rcd:TargetUniquenessConstraint ref="_85A38288-30C1-43E9-B3BD-489B32F8D024" />
+							<rcd:ReferenceConstraint id="_AF5EF2F7-6009-4132-B698-A1C62AE3BF20" Name="CertifiedEmployee_FK">
+								<rcd:TargetTable ref="_A4DD8122-DB16-4025-A6C1-387834FBA9F3" />
+								<rcd:TargetUniquenessConstraint ref="_D1C89F7B-8570-4F7E-B91F-864EB52EA45B" />
 								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_540BCBA8-0804-41A9-B013-19217F100D75" SourceColumn="_C610B337-98F7-4BBB-B82C-F9A0B1C4659D" />
-								</rcd:ColumnReferences>
-							</rcd:ReferenceConstraint>
-						</rcd:Constraints>
-					</rcd:Table>
-					<rcd:Table id="_CC1DE973-4226-445D-B1AD-B7D97313BBBC" Name="TheMilking">
-						<rcd:Columns>
-							<rcd:Column id="_B02F1E8F-1061-4978-B247-711115C6D74F" Name="healthyCowEartag" />
-							<rcd:Column id="_8D3CF753-7700-4D71-9D0D-2872B8B8471A" Name="lipidity" />
-							<rcd:Column id="_4212383E-E197-42D2-B20F-EFEADD8D79FD" Name="milkingDate" />
-							<rcd:Column id="_E98A181A-B145-4EC9-952E-3BCBBAE9E132" Name="parlorNr" />
-							<rcd:Column id="_12B78117-AAA1-425D-8516-18028B86B58F" Name="volume" />
-							<rcd:Column id="_B81999DF-4FC1-460A-8396-45C611E06EBB" Name="certifiedEmployeeName" IsNullable="true" />
-						</rcd:Columns>
-						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_EC613144-E616-48AE-8D79-BAEDB8778A72" Name="TheMilking_PK" IsPrimary="true">
-								<rcd:Columns>
-									<rcd:Column ref="_B02F1E8F-1061-4978-B247-711115C6D74F" />
-								</rcd:Columns>
-							</rcd:UniquenessConstraint>
-							<rcd:ReferenceConstraint id="_D794ED0D-CD00-403B-84FB-176AC3200F54" Name="TheMilking_FK1">
-								<rcd:TargetTable ref="_45772A74-F5F7-4912-8464-C7068DCD2EB5" />
-								<rcd:TargetUniquenessConstraint ref="_168A7F54-5C2A-4C55-9A39-D5139EA702EB" />
-								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_85480730-4874-4DBB-A7B7-B8AF10D8DB94" SourceColumn="_B81999DF-4FC1-460A-8396-45C611E06EBB" />
-								</rcd:ColumnReferences>
-							</rcd:ReferenceConstraint>
-							<rcd:ReferenceConstraint id="_96F2B672-E860-4BA2-A7BF-B7C9D75B687F" Name="TheMilking_FK2">
-								<rcd:TargetTable ref="_CDC35AD7-1A3B-42C0-8B97-5A3794169F08" />
-								<rcd:TargetUniquenessConstraint ref="_2BA66EE6-F231-47ED-84EE-BE5AFA53E125" />
-								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_3B6036FA-0E5D-4142-875A-5C285A52546E" SourceColumn="_B02F1E8F-1061-4978-B247-711115C6D74F" />
-								</rcd:ColumnReferences>
-							</rcd:ReferenceConstraint>
-						</rcd:Constraints>
-					</rcd:Table>
-					<rcd:Table id="_45772A74-F5F7-4912-8464-C7068DCD2EB5" Name="CertifiedEmployee">
-						<rcd:Columns>
-							<rcd:Column id="_85480730-4874-4DBB-A7B7-B8AF10D8DB94" Name="certifiedEmployeeName" />
-						</rcd:Columns>
-						<rcd:Constraints>
-							<rcd:UniquenessConstraint id="_168A7F54-5C2A-4C55-9A39-D5139EA702EB" Name="CertifiedEmployee_PK" IsPrimary="true">
-								<rcd:Columns>
-									<rcd:Column ref="_85480730-4874-4DBB-A7B7-B8AF10D8DB94" />
-								</rcd:Columns>
-							</rcd:UniquenessConstraint>
-							<rcd:ReferenceConstraint id="_D6E17BB3-3E31-492F-9640-3D1939257AF0" Name="CertifiedEmployee_FK">
-								<rcd:TargetTable ref="_AB02E4E4-12A9-4881-8EB6-3B1A5A602F59" />
-								<rcd:TargetUniquenessConstraint ref="_85A38288-30C1-43E9-B3BD-489B32F8D024" />
-								<rcd:ColumnReferences>
-									<rcd:ColumnReference TargetColumn="_540BCBA8-0804-41A9-B013-19217F100D75" SourceColumn="_85480730-4874-4DBB-A7B7-B8AF10D8DB94" />
+									<rcd:ColumnReference TargetColumn="_8B6788D4-AABC-459D-A50B-107B42DDF0F4" SourceColumn="_5D3B67D5-692F-439F-93CD-4723565B3DCD" />
 								</rcd:ColumnReferences>
 							</rcd:ReferenceConstraint>
 						</rcd:Constraints>
@@ -3190,12 +3152,6 @@
 	</ormtooial:Bridge>
 	<oialtocdb:MappingCustomization id="_D17FA732-A215-4475-9EDE-9073E1167983">
 		<oialtocdb:AssimilationMappings>
-			<oialtocdb:AssimilationMapping id="_D08E6508-C775-4174-85A8-A73E40AC1403" AbsorptionChoice="Separate">
-				<oialtocdb:FactType ref="_758BB762-4451-4D89-9BC0-BC3DACF94F24" />
-			</oialtocdb:AssimilationMapping>
-			<oialtocdb:AssimilationMapping id="_602E50D5-FD64-4E74-9013-92EDC08C55E1" AbsorptionChoice="Separate">
-				<oialtocdb:FactType ref="_15FA4F47-B00A-441B-B195-D8CEF36E444C" />
-			</oialtocdb:AssimilationMapping>
 			<oialtocdb:AssimilationMapping id="_B2B01536-8BD0-4A74-878F-878828DAF87E" AbsorptionChoice="Separate">
 				<oialtocdb:FactType ref="_8BF87AC7-3419-4F34-BBD0-D2DC790FEB70" />
 			</oialtocdb:AssimilationMapping>
@@ -3212,69 +3168,64 @@
 	</oialtocdb:MappingCustomization>
 	<oialtocdb:Bridge>
 		<oialtocdb:SchemaIsForAbstractionModel id="_77A2E768-138B-4DB7-BB70-3BF84D335E1E" Schema="_B6762266-0A50-443B-857B-9B5512C47DBE" AbstractionModel="_12C4C19F-1164-44B5-AA6A-CDB816FC2059" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_5932232F-78A4-42FD-8E19-1469A03D4074" Column="_D26F9668-0C9D-4242-AA4D-451C3DC0B783" ConceptTypeChild="_9FAB29CE-9B25-48A1-8C8F-295B6F5ED5CB" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_C2B0B58E-EC0A-4C45-8629-47CCE998733C" Column="_D26F9668-0C9D-4242-AA4D-451C3DC0B783" ConceptTypeChild="_5B6C8BA5-37FA-45CF-9F2E-33677B6C428A" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_246574B8-D1C0-4056-957D-AC23ED9BA695" Column="_D26F9668-0C9D-4242-AA4D-451C3DC0B783" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_C8C7DAA1-ED40-4991-864B-8282CE5ADEDF" Column="_585DC6C6-4FE9-49F2-8B14-58C29C3A8F27" ConceptTypeChild="_5B6C8BA5-37FA-45CF-9F2E-33677B6C428A" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_1FD27530-E85E-4336-8762-1D2FFC9F99DD" Column="_585DC6C6-4FE9-49F2-8B14-58C29C3A8F27" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_EEFAD1F1-1814-4A6D-B1AE-D2B92BDAF692" Column="_C7CED7A9-F64F-4ABD-89A7-BBE1A542AA14" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_AFFB8CDC-4D82-4F9E-ACEB-E0B566D0FCDB" Column="_85480730-4874-4DBB-A7B7-B8AF10D8DB94" ConceptTypeChild="_3D97AB81-9667-4630-805E-7C6E5801CD67" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_A1B33553-2C5B-4B2E-B48F-456CF8074B02" Column="_85480730-4874-4DBB-A7B7-B8AF10D8DB94" ConceptTypeChild="_C383A948-8E8F-4426-99CA-51BE2FA0AF23" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_B5D9BC49-19EF-4B3B-BBF1-AB3454523E42" Column="_B81999DF-4FC1-460A-8396-45C611E06EBB" ConceptTypeChild="_F0AB514C-0057-44C5-B952-526D3D4CEE99" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_178A2060-C1F4-47D2-BA69-1CF020B69B4C" Column="_B81999DF-4FC1-460A-8396-45C611E06EBB" ConceptTypeChild="_3D97AB81-9667-4630-805E-7C6E5801CD67" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_9E2A7106-E155-49A2-9574-4423AD0FAF80" Column="_B81999DF-4FC1-460A-8396-45C611E06EBB" ConceptTypeChild="_C383A948-8E8F-4426-99CA-51BE2FA0AF23" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_32597A77-EAD3-408F-8CCD-F41BC73E57C3" Column="_6834040D-D2BB-406A-88A9-F6480AD5A132" ConceptTypeChild="_FD35AC45-2C39-478B-BD35-C272DEB79A79" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_2ACD6F8F-234B-4203-AF3D-15FBF94FB91D" Column="_027A6C2E-EB06-44A3-A742-CC7EDEE8AC37" ConceptTypeChild="_AD598C4D-21B9-42A9-A9E8-F9F1A846A3D7" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_A637C936-B0CD-4B4C-BA52-7433483B3605" Column="_027A6C2E-EB06-44A3-A742-CC7EDEE8AC37" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_86FA7AD3-EDAE-49AF-9329-E58515F73A0D" Column="_027A6C2E-EB06-44A3-A742-CC7EDEE8AC37" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_54507DB6-83C3-4AE3-999F-96DAE0B4CFA8" Column="_7B0C0734-4007-4D76-A28B-3E5DDE40B271" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_D9CF6E68-6A21-4487-86B9-BD3A80939AF2" Column="_7B0C0734-4007-4D76-A28B-3E5DDE40B271" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_67AE74B7-0AF1-41B5-8431-3FC180C464B0" Column="_C610B337-98F7-4BBB-B82C-F9A0B1C4659D" ConceptTypeChild="_B4CBF91C-ADBE-415D-95B4-7B2DA519FC52" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_D3E32B26-A01E-47A1-A2BD-F2C251E5C074" Column="_C610B337-98F7-4BBB-B82C-F9A0B1C4659D" ConceptTypeChild="_C383A948-8E8F-4426-99CA-51BE2FA0AF23" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_7C58C4EE-262A-426C-A1D0-ED23A75B3FA1" Column="_540BCBA8-0804-41A9-B013-19217F100D75" ConceptTypeChild="_C383A948-8E8F-4426-99CA-51BE2FA0AF23" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_D4A14650-BDCD-4EC3-BA96-C49AB1FC55A9" Column="_13CCF332-4739-4B8C-B1E1-943F54FAC384" ConceptTypeChild="_D4EC4564-C63D-41B9-9653-DDDF87E671AD" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_1BE093C3-F01A-450F-BE1F-3798310B942A" Column="_BDFCABF7-01DE-4597-9F86-454AC15E078D" ConceptTypeChild="_173D2C0F-97FB-48CB-BBF8-54F1366CDC14" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_B4CF6180-1282-47F2-AE6A-FF7FDF2C0D29" Column="_3B6036FA-0E5D-4142-875A-5C285A52546E" ConceptTypeChild="_E57F1910-20AF-434B-B897-D78E5049D397" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_D7DA3476-560E-4F40-8B1D-382035198C25" Column="_3B6036FA-0E5D-4142-875A-5C285A52546E" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_A1B37482-CF71-4AEA-8125-C021529AFBC4" Column="_3B6036FA-0E5D-4142-875A-5C285A52546E" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_31CBBB3A-0D6F-497C-8229-CF3928D8C8EC" Column="_B02F1E8F-1061-4978-B247-711115C6D74F" ConceptTypeChild="_2908293F-8447-432D-A8A9-25AD952CA1FD" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_D1D92F82-0C7A-4DEA-BF13-C7DFC2CBB943" Column="_B02F1E8F-1061-4978-B247-711115C6D74F" ConceptTypeChild="_E57F1910-20AF-434B-B897-D78E5049D397" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_75A89A06-263F-4BC0-AF99-1D747F4C2EB7" Column="_B02F1E8F-1061-4978-B247-711115C6D74F" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_F6A9CF68-67EB-4F3B-B75B-530A31C08913" Column="_B02F1E8F-1061-4978-B247-711115C6D74F" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_694D6A5F-522C-43BC-89D7-BF748564FD64" Column="_CC316C2A-CC60-4430-BC5D-47EAA9686EA9" ConceptTypeChild="_61FBD55D-10C5-4F89-BA85-F803AAF53F92" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_1EAB7649-D4BF-4966-A30E-B441FA162BE4" Column="_8D3CF753-7700-4D71-9D0D-2872B8B8471A" ConceptTypeChild="_72868DA6-E1A5-44C5-A78A-3CBAC39B8EA7" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_13093A52-AF49-422B-82DB-2F62FFA16E31" Column="_4212383E-E197-42D2-B20F-EFEADD8D79FD" ConceptTypeChild="_7C972E65-7323-4A54-B3D7-08B5F6052588" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_3B41A869-E8D2-4A9E-9AA0-035D5E9851D1" Column="_E98A181A-B145-4EC9-952E-3BCBBAE9E132" ConceptTypeChild="_8F6136DB-6B59-4156-9B50-BB2BEA5B0657" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_5F218E09-71D8-4F20-838F-A7E43918B195" Column="_83F5513B-0880-4464-BC27-12370AECA2C5" ConceptTypeChild="_DF46BBF9-E65C-41C7-B09E-9257FFB50F91" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_B23317EC-CC64-48A3-9F19-118C97A32C3B" Column="_05252DE4-B4AE-43D6-9C46-9AD35561DE26" ConceptTypeChild="_23438117-4990-4F1D-8513-D5DDA3E1D9AD" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_6C4C01F3-E591-4104-8347-C23EB38F0B72" Column="_C94DB9A5-3B77-453D-8485-55FF37BC374D" ConceptTypeChild="_AAD65847-CA4A-4959-A9BC-A3FDE71B7265" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_81E45872-6F1B-4D87-83C9-4CF28F1AFDA9" Column="_B616244D-676E-423E-9410-73B5505999BC" ConceptTypeChild="_E145F8F5-E721-4858-B0E2-0E98940C14F6" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_0CA52794-B1C5-4962-B5F3-9B0E4D10E4AA" Column="_E6916BA7-5064-4A86-B440-7E62A212C64D" ConceptTypeChild="_A70538AF-E3C2-4C22-A98B-22ECB090C98F" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_94B044A7-A7F3-4680-B515-41A52738FE4D" Column="_278B2133-9E57-45A3-AB4C-B451D5BFAE89" ConceptTypeChild="_E60B5C46-A66E-4ED0-9E1D-81F99424500A" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_E6454668-893E-48DE-9A2F-316FD84DE72A" Column="_278B2133-9E57-45A3-AB4C-B451D5BFAE89" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_E8A8E553-337B-45A5-A1A2-FE1381BF75C8" Column="_278B2133-9E57-45A3-AB4C-B451D5BFAE89" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_14175DF7-74B5-417B-BFD3-BB89895EC4DC" Column="_12B78117-AAA1-425D-8516-18028B86B58F" ConceptTypeChild="_AF3BFC64-C97E-4CC2-B73F-E57E852174CD" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_6E5B9076-3782-4944-A418-574C3FD6C97F" Column="_C9F339E1-FD5E-4A53-9724-C80C4046EDDF" ConceptTypeChild="_0E363281-5990-4547-BEF4-5F97DD341BBF" />
-		<oialtocdb:ColumnHasConceptTypeChild id="_05CB0DA3-5C43-42C6-B14D-0A8422B8BC17" Column="_CB04D209-5200-4F1E-B624-DB9D570B911D" ConceptTypeChild="_93B4F450-BF52-47EC-BFA9-9CB9E850E3EB" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_679856AE-3241-4410-A304-536EC945082E" Table="_DCC08210-9138-4F6C-90ED-FA1191915ACB" ConceptType="_4C7DAF08-8465-43B3-A25E-59C88A3D5BBF" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_792C8308-17B2-43EC-9701-778B09C25EA7" Table="_4E7E6AC1-FF49-4DAC-8670-BFE1036673E4" ConceptType="_58F3D236-84E0-43CD-B395-328A8AB2AE1C" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_F065A0B8-31D6-4A1F-9E77-B50D7E32888D" Table="_45772A74-F5F7-4912-8464-C7068DCD2EB5" ConceptType="_308FC72D-9AE7-44D6-BEDA-6783CEDFA293" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_D599009B-D262-4E41-B2FE-62D8A7A7CF5D" Table="_556BCE15-2592-4F53-812F-445DF353643C" ConceptType="_779F1EAF-D19A-4430-8409-EA35DE74846A" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_975C5D1B-9F35-402B-800E-9A633626B861" Table="_AB02E4E4-12A9-4881-8EB6-3B1A5A602F59" ConceptType="_FE5F80BB-232D-4EB2-9341-711E3A54C908" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_5BD0D52F-C297-4B22-AB3D-6469F82CB2FF" Table="_E9E49E0E-7D78-4DEE-926D-B2D87CE9A06D" ConceptType="_BDC18CEB-7610-4CB8-A40C-EAB812405110" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_5B58D0C6-6057-4396-8AB9-6D8379994E29" Table="_CDC35AD7-1A3B-42C0-8B97-5A3794169F08" ConceptType="_8AEEA7EE-19BA-442B-B6C8-3B0C63496CCF" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_3639CDE7-C4DF-423A-BCFE-EFB10CA19468" Table="_CC1DE973-4226-445D-B1AD-B7D97313BBBC" ConceptType="_EB20E3D7-B6F5-4437-878E-8373F221E27E" />
-		<oialtocdb:TableIsPrimarilyForConceptType id="_8A4C27E3-8C4D-4222-A6C4-F9C6FBD1E7D7" Table="_57588648-6031-40F4-96B1-D1BE95CEEC13" ConceptType="_C26A3D8A-24E5-418E-91B9-174513382799" />
-		<oialtocdb:UniquenessConstraintIsForUniqueness id="_C469E5FB-48D6-48DD-966B-A302F55DFC80" UniquenessConstraint="_E9ECB294-4F23-4774-90CB-00611ADE85C6" Uniqueness="_C96B6E35-1D3F-4F89-A574-6A14EA4449B8" />
-		<oialtocdb:UniquenessConstraintIsForUniqueness id="_72CEE5F9-6142-4A0F-BBB6-F8E4AA88502F" UniquenessConstraint="_E06C6296-E918-435E-A655-BAD9395B1134" Uniqueness="_6F5B2641-EA7E-40AE-A382-E20F64CD36C1" />
-		<oialtocdb:UniquenessConstraintIsForUniqueness id="_788AA6B3-FF8C-4FD5-8310-28F3C44CC287" UniquenessConstraint="_A5B5B1B8-27A1-456B-B4D8-3AB2CC79BCF4" Uniqueness="_406182B4-BB27-478D-A622-DC1F7AC34804" />
-		<oialtocdb:UniquenessConstraintIsForUniqueness id="_D8BAF752-CC04-4956-AEBE-EE6F0B9CF579" UniquenessConstraint="_85A38288-30C1-43E9-B3BD-489B32F8D024" Uniqueness="_C0EB5578-9E18-49C6-BB71-C4AE52E653FC" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_6BFF299E-A184-406E-8FD2-0A7796284161" Column="_0F7E0D28-FC78-47A5-9336-E8E7B1CCC1F4" ConceptTypeChild="_9FAB29CE-9B25-48A1-8C8F-295B6F5ED5CB" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_25A43FC4-8E70-4A6B-BDB6-1DD63EC9A2B1" Column="_0F7E0D28-FC78-47A5-9336-E8E7B1CCC1F4" ConceptTypeChild="_5B6C8BA5-37FA-45CF-9F2E-33677B6C428A" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_80CB8076-917D-4915-BAD8-D71EEE600F7B" Column="_0F7E0D28-FC78-47A5-9336-E8E7B1CCC1F4" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_0ABAEA3C-4946-4CDB-A4B1-50942F8302E3" Column="_AF87E0D7-3617-4C1E-B32E-A5682C6932E9" ConceptTypeChild="_5B6C8BA5-37FA-45CF-9F2E-33677B6C428A" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_1C1113A6-F5D8-4A03-B082-875AA71F3676" Column="_AF87E0D7-3617-4C1E-B32E-A5682C6932E9" ConceptTypeChild="_23438117-4990-4F1D-8513-D5DDA3E1D9AD" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_C8C55A98-4FA8-4C52-B729-0D1058025A02" Column="_8D0A6AD1-D77B-439D-B59A-64D68AA1DF9E" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_A3A9DD43-A9B9-4BA7-A476-0D384A3E8516" Column="_CCE5BF56-B16D-4C83-AF28-5935217BD70A" ConceptTypeChild="_F0AB514C-0057-44C5-B952-526D3D4CEE99" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_5C006E54-C4E1-47E4-B772-108591F88A05" Column="_CCE5BF56-B16D-4C83-AF28-5935217BD70A" ConceptTypeChild="_3D97AB81-9667-4630-805E-7C6E5801CD67" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_073C739B-C328-4D93-AB64-1BE1448FEE36" Column="_CCE5BF56-B16D-4C83-AF28-5935217BD70A" ConceptTypeChild="_C383A948-8E8F-4426-99CA-51BE2FA0AF23" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_A1A8F070-13DA-4C06-80B8-4B0BE6398A34" Column="_5D3B67D5-692F-439F-93CD-4723565B3DCD" ConceptTypeChild="_3D97AB81-9667-4630-805E-7C6E5801CD67" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_18962485-0711-4740-A6E8-75AB6D40E4B3" Column="_5D3B67D5-692F-439F-93CD-4723565B3DCD" ConceptTypeChild="_C383A948-8E8F-4426-99CA-51BE2FA0AF23" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_39D97DE6-7F8D-4E8A-9598-6CF60CA744DE" Column="_C0C4D10F-685E-43E9-B181-16FB4D886415" ConceptTypeChild="_FD35AC45-2C39-478B-BD35-C272DEB79A79" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_A6DC61CD-E5AB-47EA-A2A7-D559FC73D478" Column="_24EB407D-B021-4327-AB2B-AE2B1A111E27" ConceptTypeChild="_AD598C4D-21B9-42A9-A9E8-F9F1A846A3D7" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_AC83EF0C-4E8D-46D7-A31F-D51123841FDE" Column="_24EB407D-B021-4327-AB2B-AE2B1A111E27" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_4E84558E-2F53-4731-BE0F-9E6131DAB176" Column="_24EB407D-B021-4327-AB2B-AE2B1A111E27" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_E5714453-2CFD-467B-BEF6-B4D55CD1CFB1" Column="_8B6788D4-AABC-459D-A50B-107B42DDF0F4" ConceptTypeChild="_C383A948-8E8F-4426-99CA-51BE2FA0AF23" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_7EBCBA68-C6B3-4723-A009-7D62E647374E" Column="_8D8981D3-351E-4060-9719-72763759283A" ConceptTypeChild="_B4CBF91C-ADBE-415D-95B4-7B2DA519FC52" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_E1D5C1A5-2503-4DDD-B358-ADD0C3781187" Column="_8D8981D3-351E-4060-9719-72763759283A" ConceptTypeChild="_C383A948-8E8F-4426-99CA-51BE2FA0AF23" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_99C3F64B-9D9B-49B9-AC4E-228DE4942C7F" Column="_4391FA42-4681-4CFB-AF35-9640686E3916" ConceptTypeChild="_D4EC4564-C63D-41B9-9653-DDDF87E671AD" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_353274D2-EBD2-4675-9AF1-C5E26B843EEC" Column="_00028028-041B-43E7-BFB8-5E77056E88CF" ConceptTypeChild="_173D2C0F-97FB-48CB-BBF8-54F1366CDC14" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_8DDE2489-7A3F-4143-B561-3B5EC1D0C4AB" Column="_6D808A08-4A62-49A4-B64B-A5DD8B068B5F" ConceptTypeChild="_2908293F-8447-432D-A8A9-25AD952CA1FD" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_4C67F197-73EF-43D6-BB50-8EE7A5EFC0E4" Column="_6D808A08-4A62-49A4-B64B-A5DD8B068B5F" ConceptTypeChild="_E57F1910-20AF-434B-B897-D78E5049D397" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_7BA4963F-C8F3-49C8-9DE5-27D6A605F01A" Column="_6D808A08-4A62-49A4-B64B-A5DD8B068B5F" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_B3E38008-89F8-47B3-994A-4F578EA7A02F" Column="_6D808A08-4A62-49A4-B64B-A5DD8B068B5F" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_018876A4-AD3B-41D5-89E5-C1B1752674F2" Column="_1ED54C85-7858-451C-A73F-285B5A04582C" ConceptTypeChild="_E57F1910-20AF-434B-B897-D78E5049D397" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_87ADBB56-DD3B-497B-AA53-78358C7BF919" Column="_1ED54C85-7858-451C-A73F-285B5A04582C" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_2E2E0E2F-14BE-4986-B244-7392FAF14DB2" Column="_1ED54C85-7858-451C-A73F-285B5A04582C" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_D6521872-1A56-4417-832A-E82934842E1E" Column="_5436A9CD-D4E3-4CEA-8269-37A1FD619045" ConceptTypeChild="_61FBD55D-10C5-4F89-BA85-F803AAF53F92" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_8C985664-08E7-4DC1-9971-BDF0C36433B4" Column="_F9D42FA2-C681-4B08-A6C7-DB4CF027E4F3" ConceptTypeChild="_72868DA6-E1A5-44C5-A78A-3CBAC39B8EA7" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_83CDBCA2-AAB8-42CC-906C-CF1ABC2A2F70" Column="_F84DE7A3-9222-4EF9-87D4-AAC2E860C9A4" ConceptTypeChild="_7C972E65-7323-4A54-B3D7-08B5F6052588" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_468E8E6D-FE68-4796-A175-98669C7D2BBE" Column="_3A1BBE04-5645-460F-A927-883C2E06BA67" ConceptTypeChild="_8F6136DB-6B59-4156-9B50-BB2BEA5B0657" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_DC565B7F-7500-4240-BB2C-5A8A4FC6B57D" Column="_A56841C9-9208-4EB4-BB83-52058707368F" ConceptTypeChild="_DF46BBF9-E65C-41C7-B09E-9257FFB50F91" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_6E12E7C4-8D02-4CDE-8DBB-5067825191F9" Column="_6E2A6A47-0B17-484C-B01B-66EBE14B5E48" ConceptTypeChild="_AAD65847-CA4A-4959-A9BC-A3FDE71B7265" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_4CB0242B-1748-4053-A427-5A6F6D3C272D" Column="_9B1AD057-7A6F-4611-B87D-A2BF713D46B8" ConceptTypeChild="_E145F8F5-E721-4858-B0E2-0E98940C14F6" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_5946B41F-F96D-406B-BE1D-97B92C2F3B01" Column="_A34ED2C1-3491-4524-9FC5-201433CE462E" ConceptTypeChild="_A70538AF-E3C2-4C22-A98B-22ECB090C98F" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_1408FC8F-810F-404E-841D-C2582932A787" Column="_1294FE6B-52C9-4BD9-B328-4B41EE413991" ConceptTypeChild="_E60B5C46-A66E-4ED0-9E1D-81F99424500A" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_B2703F00-2236-4952-A91C-DC144BCF49C1" Column="_1294FE6B-52C9-4BD9-B328-4B41EE413991" ConceptTypeChild="_9E82B0FC-2D5A-4DF7-9B3E-78385BA10C76" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_0BC424DE-8811-462A-85DB-69E699D6BA30" Column="_1294FE6B-52C9-4BD9-B328-4B41EE413991" ConceptTypeChild="_56D38162-BE6B-426B-A8DD-5430306DBB88" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_EA3604F0-7203-4B09-BD97-51DEA8670037" Column="_1AAB5870-AD61-4864-904C-DE1E48112DC1" ConceptTypeChild="_AF3BFC64-C97E-4CC2-B73F-E57E852174CD" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_5DBDD700-9F27-4385-85AE-93B4E5C27C41" Column="_5AF2ED1F-B7AD-443F-8776-6CCAF8823F2A" ConceptTypeChild="_0E363281-5990-4547-BEF4-5F97DD341BBF" />
+		<oialtocdb:ColumnHasConceptTypeChild id="_A2DEABCF-61B1-4344-9516-0F864AFB1788" Column="_D452EA0B-18BA-46F1-80A7-8ACCD2DFFE87" ConceptTypeChild="_93B4F450-BF52-47EC-BFA9-9CB9E850E3EB" />
+		<oialtocdb:TableIsPrimarilyForConceptType id="_8EA7DF13-1ACA-4BE1-AD33-6DA58563BE50" Table="_293124A6-28C9-4700-9D91-F327666D3BBC" ConceptType="_58F3D236-84E0-43CD-B395-328A8AB2AE1C" />
+		<oialtocdb:TableIsPrimarilyForConceptType id="_232AE4F4-FD5A-40D6-8E1D-69BE18D536CB" Table="_7ECA33F4-52D3-4FC2-994E-A1BB001B0010" ConceptType="_308FC72D-9AE7-44D6-BEDA-6783CEDFA293" />
+		<oialtocdb:TableIsPrimarilyForConceptType id="_7F4A8F6F-6838-4D48-99A3-CFC67FAA5373" Table="_A4DD8122-DB16-4025-A6C1-387834FBA9F3" ConceptType="_FE5F80BB-232D-4EB2-9341-711E3A54C908" />
+		<oialtocdb:TableIsPrimarilyForConceptType id="_278B7F56-CF0F-4684-975E-F381A78FDA7A" Table="_A50A1C05-34D5-40E3-9EE8-C1986C3F95FD" ConceptType="_BDC18CEB-7610-4CB8-A40C-EAB812405110" />
+		<oialtocdb:TableIsPrimarilyForConceptType id="_B6F37418-6FA8-4D6F-A747-90F69587260D" Table="_07FAAA00-A68A-4F06-92CB-5FA486034B9A" ConceptType="_8AEEA7EE-19BA-442B-B6C8-3B0C63496CCF" />
+		<oialtocdb:TableIsPrimarilyForConceptType id="_EDCBE0E4-3694-4057-9C47-6679F47DF8F6" Table="_94D2D62D-21A4-4D47-94E8-65847C93EB09" ConceptType="_EB20E3D7-B6F5-4437-878E-8373F221E27E" />
+		<oialtocdb:TableIsPrimarilyForConceptType id="_9D32E409-DB11-4373-9E98-53DE36F8B45F" Table="_E4AEB512-5CB7-42D3-A42E-214DCCD1654F" ConceptType="_C26A3D8A-24E5-418E-91B9-174513382799" />
+		<oialtocdb:TableIsAlsoForConceptType id="_859F9B92-CA05-47D6-B8D0-E79D06026B26" Table="_293124A6-28C9-4700-9D91-F327666D3BBC" ConceptType="_779F1EAF-D19A-4430-8409-EA35DE74846A" />
+		<oialtocdb:TableIsAlsoForConceptType id="_3205EE38-0C64-484A-88B0-BF1AB0F8C46E" Table="_293124A6-28C9-4700-9D91-F327666D3BBC" ConceptType="_4C7DAF08-8465-43B3-A25E-59C88A3D5BBF" />
+		<oialtocdb:UniquenessConstraintIsForUniqueness id="_215A15BF-60E8-4F2B-A624-0F4896BCB1C1" UniquenessConstraint="_5D0AC00B-951F-4B82-A9EC-5AAD2BA6A676" Uniqueness="_C96B6E35-1D3F-4F89-A574-6A14EA4449B8" />
+		<oialtocdb:UniquenessConstraintIsForUniqueness id="_7F115317-5ABB-4BA8-8066-EFA3F6772BA9" UniquenessConstraint="_3CACA010-8FF3-426D-AB10-89AB66EBFD71" Uniqueness="_6F5B2641-EA7E-40AE-A382-E20F64CD36C1" />
+		<oialtocdb:UniquenessConstraintIsForUniqueness id="_D240618E-4B24-48A4-A002-E507FA8863EA" UniquenessConstraint="_8F46A251-9721-4B8D-9D4D-063E031E8CC7" Uniqueness="_406182B4-BB27-478D-A622-DC1F7AC34804" />
+		<oialtocdb:UniquenessConstraintIsForUniqueness id="_8DAB8931-40A4-44F1-A3A7-D49284C98ABD" UniquenessConstraint="_D1C89F7B-8570-4F7E-B91F-864EB52EA45B" Uniqueness="_C0EB5578-9E18-49C6-BB71-C4AE52E653FC" />
 	</oialtocdb:Bridge>
 	<rvw:RelationalDiagram id="_7BA5E3B7-8EA5-4131-8031-15C6FBBC63D9" DisplayDataTypes="true" SubjectRef="_8839E4BB-B2EF-4DCA-8339-1F16DC7AA06E">
 		<rvw:TableShape ObjectTypeRef="_1F613E11-F5BE-47B0-9FF4-73AE7F3B2764" Location="3.25, 2.625" />
-		<rvw:TableShape ObjectTypeRef="_C42A02E8-79D1-425E-8A94-881030040D22" Location="7.25, 3.25" />
 		<rvw:TableShape ObjectTypeRef="_81462332-4796-490D-A31F-B47B0CFF63CB" Location="7.25, 0.5" />
-		<rvw:TableShape ObjectTypeRef="_6B24524E-A478-4A58-AC30-7E8B5FE4EAB9" Location="10.375, 0.5" />
 		<rvw:TableShape ObjectTypeRef="_3F4FAC02-A07C-4819-82FC-551149E18E50" Location="6.875, 4.5" />
 		<rvw:TableShape ObjectTypeRef="_F394C5BB-71F9-40C9-9428-F7617139E09C" Location="10, 3.25" />
 		<rvw:TableShape ObjectTypeRef="_EABD0E0D-7060-4A6F-B9AB-BF32703E4945" Location="3.375, 1" />
